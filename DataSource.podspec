@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
     tag: s.version,
   }
   s.source_files = 'DataSource/**/*.swift'
-  s.osx.exclude_files = 'DataSource/**/TableView*.swift', 'DataSource/**/CollectionView*.swift'
+  s.osx.exclude_files = 'DataSource/**/TableView*.swift', 'DataSource/**/CollectionView*.swift', 'DataSource/**/DataSourceCellDescriptor.swift'
 end
