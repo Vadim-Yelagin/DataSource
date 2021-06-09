@@ -9,7 +9,15 @@
 import Combine
 import CoreData
 import Foundation
+#if canImport(UIKit)
 import UIKit
+
+private typealias CollectionView = UICollectionView
+#else
+import AppKit
+
+private typealias CollectionView = NSCollectionView
+#endif
 
 /// `DataSource` implementation whose items are Core Data managed objects fetched by an `NSFetchedResultsController`.
 ///
@@ -63,7 +71,7 @@ public final class FetchedResultsDataSource: DataSource {
 	}
 
 	public func supplementaryItemOfKind(_ kind: String, inSection section: Int) -> Any? {
-		if kind != UICollectionView.elementKindSectionHeader {
+		if kind != CollectionView.elementKindSectionHeader {
 			return nil
 		}
 		let sectionInfo = self.infoForSection(section)

@@ -6,8 +6,6 @@
 //  Copyright © 2015 Fueled. All rights reserved.
 //
 
-import UIKit
-
 /// Implement this protocol in your `UITableViewCell` or `UICollectionView` subclass
 /// to make it receive corresponding items of the dataSource associated
 /// with a `TableViewDataSource` or a `CollectionViewDataSource`.
